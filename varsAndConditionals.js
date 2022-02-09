@@ -21,7 +21,7 @@ let eowynDefense = 0;
 if (eowynHealth + eowynDefense <= witchKingAttack) {
     console.log("She dead");
 } else {
-   eowynHealth -= witchKingAttack;
+//    eowynHealth -= witchKingAttack;
     console.log("She alive")
     console.log(`She is down to ${eowynHealth} health points.`);
 };
@@ -32,4 +32,13 @@ if (coinLandsHeads === true) {
     console.log("Witch King gets to run away")
 } else {
     console.log("Witch King got stabbed in the face")
+};
+
+for(let i = 0; i < 5; i++) {
+    if(eowynHealth > 0) {
+        eowynHealth = eowynHealth - witchKingAttack;
+        console.log(`Eowyn has ${eowynHealth} left.`);
+    } else {
+    console.log("she dead.");
+    };
 };
