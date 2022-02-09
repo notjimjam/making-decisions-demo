@@ -34,11 +34,19 @@ if (coinLandsHeads === true) {
     console.log("Witch King got stabbed in the face")
 };
 
-for(let i = 0; i < 5; i++) {
-    if(eowynHealth > 0) {
-        eowynHealth = eowynHealth - witchKingAttack;
-        console.log(`Eowyn has ${eowynHealth} left.`);
-    } else {
-    console.log("she dead.");
+// for(let i = 0; i < 5; i++) {
+//     if(eowynHealth > 0) {
+//         eowynHealth = eowynHealth - witchKingAttack;
+//         console.log(`Eowyn has ${eowynHealth} left.`);
+//     } else {
+//     console.log("she dead.");
+//     };
+// };
+
+while(eowynHealth > 0) {
+    eowynHealth -=witchKingAttack;
+    console.log(`Eowyn has ${eowynHealth} health left.`)
+    if(eowynHealth <= 0) {
+        console.log("Eowyn got dead");
     };
 };
